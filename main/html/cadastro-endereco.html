@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drogaria Total - Endereço de Entrega</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <script src="../js/config.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/produtos.js"></script>
+    <script src="../js/carrinho.js"></script>
+    <script src="../js/cadastro.js"></script>
+    <script src="../js/pedido.js"></script>
+    <script src="../js/admin.js"></script>
+    <script src="../js/main.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Drogaria Total</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Produtos</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+                <li><a href="finalizarcompra.html">Finalizar Compra</a></li>
+                <li><a href="cadastro-cliente.html">Cadastro de Cliente</a></li>
+                <li><a href="cadastro-endereco.html">Endereço de Entrega</a></li>
+                <li><a href="pagamento.html">Pagamento</a></li>
+                <li><a href="statusped.html">Status do Pedido</a></li>
+                <li><a href="admin.html">Área da Farmácia</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Cadastro de Endereço</h2>
+            <form id="form-endereco">
+
+                <label for="cep">CEP *:</label>
+                <input type="text" id="cep" name="cep" required>
+                <br><br>
+
+                <label for="rua">Nome da Rua *:</label>
+                <input type="text" id="rua" name="rua" required>
+                <br><br>
+
+                <label for="numero">Número *:</label>
+                <input type="text" id="numero" name="numero" required>
+                <br><br>
+
+                <label for="bairro">Bairro:</label>
+                <input type="text" id="bairro" name="bairro">
+                <br><br>
+
+                <label for="complemento">Complemento:</label>
+                <input type="text" id="complemento" name="complemento">
+                <br><br>
+
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" name="cidade" required>
+                <br><br>
+
+                <label for="estado">Estado:</label>
+                <input type="text" id="estado" name="estado" required>
+                <br><br>
+
+                <button type="submit">Continuar para Pagamento</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Drogaria Total - Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

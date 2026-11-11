@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drogaria Total - Cadastro de Cliente</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <script src="../js/config.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/produtos.js"></script>
+    <script src="../js/carrinho.js"></script>
+    <script src="../js/cadastro.js"></script>
+    <script src="../js/pedido.js"></script>
+    <script src="../js/admin.js"></script>
+    <script src="../js/main.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Drogaria Total</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Produtos</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+                <li><a href="finalizarcompra.html">Finalizar Compra</a></li>
+                <li><a href="cadastro-cliente.html">Cadastro de Cliente</a></li>
+                <li><a href="cadastro-endereco.html">Endereço de Entrega</a></li>
+                <li><a href="pagamento.html">Pagamento</a></li>
+                <li><a href="statusped.html">Status do Pedido</a></li>
+                <li><a href="admin.html">Área da Farmácia</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+    <section>
+        <h2>Cadastro do Cliente</h2>
+        <form id="form-cliente">
+            <fieldset>
+                <legend>Opção de Cadastro</legend>
+                <label>
+                    <input type="radio" name="tipo_cadastro" value="email" checked> Cadastrar via E-mail
+                </label>
+                <label>
+                    <input type="radio" name="tipo_cadastro" value="telefone"> Cadastrar via Telefone
+                </label>
+            </fieldset>
+
+            <br>
+
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required>
+            <br><br>
+
+            <!-- NOVAS DIVS COM OS IDs QUE O JAVASCRIPT PRECISA -->
+            <div id="container-email">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email">
+            </div>
+
+            <div id="container-telefone" style="display: none;">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone">
+            </div>
+
+            <br>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+            <br><br>
+
+            <label><input type="checkbox" required> Autorizo o uso dos meus dados para a entrega do pedido, conforme a LGPD.</label>
+            <br><br>
+            <button type="submit">Continuar para Cadastro de Endereço</button>
+        </form>
+    </section>
+    </main>
+
+    <footer>
+        <p>&copy; Drogaria Total - Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

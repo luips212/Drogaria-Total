@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drogaria Total - Produtos</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/config.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/produtos.js"></script>
+    <script src="js/carrinho.js"></script>
+    <script src="js/cadastro.js"></script>
+    <script src="js/pedido.js"></script>
+    <script src="js/admin.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <header>
+        <div class="brand">
+            <img src="logo-drogaria.png" alt="Logo da Drogaria Total">
+            <h1>Drogaria Total</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Produtos</a></li>
+                <li><a href="html/carrinho.html">Carrinho</a></li>
+                <li><a href="html/finalizarcompra.html">Finalizar Compra</a></li>
+                <li><a href="html/cadastro-cliente.html">Cadastro de Cliente</a></li>
+                <li><a href="html/cadastro-endereco.html">Endereço de Entrega</a></li>
+                <li><a href="html/pagamento.html">Pagamento</a></li>
+                <li><a href="html/statusped.html">Status do Pedido</a></li>
+                <li><a href="html/admin.html">Área da Farmácia</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Apresentação de Produtos</h2>
+            <p>Busque pelo nome ou filtre por categoria:</p>
+            <div class="toolbar">
+                <input type="text" id="busca" placeholder="Buscar produto..." oninput="renderCatalogo()">
+                <select id="filtro-cat" onchange="renderCatalogo()"></select>
+            </div>
+            <div id="lista-produtos" class="grade"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Drogaria Total - Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

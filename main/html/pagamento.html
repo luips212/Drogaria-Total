@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drogaria Total - Pagamento</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <script src="../js/config.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/produtos.js"></script>
+    <script src="../js/carrinho.js"></script>
+    <script src="../js/cadastro.js"></script>
+    <script src="../js/pedido.js"></script>
+    <script src="../js/admin.js"></script>
+    <script src="../js/main.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Drogaria Total</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Produtos</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+                <li><a href="finalizarcompra.html">Finalizar Compra</a></li>
+                <li><a href="cadastro-cliente.html">Cadastro de Cliente</a></li>
+                <li><a href="cadastro-endereco.html">Endereço de Entrega</a></li>
+                <li><a href="pagamento.html">Pagamento</a></li>
+                <li><a href="statusped.html">Status do Pedido</a></li>
+                <li><a href="admin.html">Área da Farmácia</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+    <section>
+        <h2>Confirmação do Pagamento</h2>
+        <form id="form-pagamento">
+            <fieldset>
+                <legend>Forma de Pagamento</legend>
+
+                <label>
+                    <input type="radio" name="forma_pagamento" value="credito" required> Cartão de Crédito
+                </label><br>
+
+                <label>
+                    <input type="radio" name="forma_pagamento" value="debito"> Cartão de Débito
+                </label><br>
+
+                <label>
+                    <input type="radio" name="forma_pagamento" value="pix"> Pix
+                </label><br>
+
+                <label>
+                    <input type="radio" name="forma_pagamento" value="dinheiro"> Dinheiro
+                </label><br>
+            </fieldset>
+
+            <br>
+
+            <!-- ADICIONADO id="secao-dinheiro" E style="display: none;" -->
+            <fieldset id="secao-dinheiro" style="display: none;">
+                <legend>Opções para Pagamento em Dinheiro</legend>
+                <p>Precisa de troco?</p>
+                <label>
+                    <input type="radio" name="precisa_troco" value="nao" checked> Não, valor exato
+                </label><br>
+                <label>
+                    <input type="radio" name="precisa_troco" value="sim"> Sim, preciso de troco
+                </label><br><br>
+
+                <!-- ENVOLVIDO EM UMA DIV COM id="container-valor-troco" E style="display: none;" -->
+                <div id="container-valor-troco" style="display: none;">
+                    <label for="valor_troco">Troco para quanto?</label>
+                    <input type="text" id="valor_troco" name="valor_troco" placeholder="Ex: R$ 50,00">
+                </div>
+            </fieldset>
+
+            <br>
+
+            <button type="submit">Finalizar Pedido e Confirmar Pagamento</button>
+        </form>
+    </section>
+    </main>
+
+    <footer>
+        <p>&copy; Drogaria Total - Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
